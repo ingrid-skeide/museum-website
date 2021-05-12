@@ -3,17 +3,29 @@
     src: url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 }
 
+@font-face {
+    font-family: 'Roboto Mono', monospace;
+    src: url('https://fonts.googleapis.com/css2?family=Michroma&family=Roboto+Mono:wght@100&display=swap');
+}
+
 body {
     margin: 0;
 }
 
 nav {
     background-color: #2c2c2c;
-    border: solid 5px #D9AD2B;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    min-height: 80px;
+    border: solid 4px #D9AD2B;
+    min-height: 90px;
+    width: 100%;
+}
+
+.logo {
+    float: left;
+}
+
+.hamburger-label {
+    float: right;
+    color: #fff;
 }
 
 .menu-items {
@@ -22,22 +34,32 @@ nav {
 
 nav ul li a {
     text-decoration: none;
+    float: right;
 }
 
-nav ul {
-    position: absolute;
+#hamburger-menu {
+    display: none;
 }
 
 #hamburger-menu:checked ~ .menu-items {
     display: block;
 }
 
+
+
+
+
 /*MAIN*/
 main {
-    grid-template-columns: auto;
+    grid-template-columns: repeat(6, auto);
     grid-template-rows: auto;
     grid-template-areas: 
-    'welcome';
+    'welcome'
+    'explore'
+    'kids'
+    'teachers'
+    'researchers'
+    'exhibits';
 }
 
 .welcome-carousel {
@@ -63,6 +85,50 @@ h2 {
     font-family: 'Michroma', sans-serif;
 }
 
+p {
+    text-align: center;
+    font-family: 'Roboto mono', monospace;
+    margin: 20px 70px;
+}
+
+.long-line {
+    margin: 50px 30px;
+    color: #707070;
+    height: 3px;
+    background-color: #707070;
+}
+
 hr {
-    margin: 20px 10px;
+    color: #D9AD2B;
+    background-color: #D9AD2B;
+    height: 2px;
+    width: 80px;
+}
+
+.explore {
+    grid-area: explore;
+}
+
+.kids {
+    grid-area: kids;
+    background-color: #486773;
+    color: #D9AD2B;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.teachers {
+    grid-area: teachers;
+    background-color: #2c2c2c;
+    color: #fff;
+}
+
+.researchers {
+    grid-area: researchers;
+    background-color: #bf3c30;
+}
+
+.exhibits {
+    grid-area: exhibits;
 }

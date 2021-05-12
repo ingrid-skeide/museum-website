@@ -1,0 +1,65 @@
+/*
+#hamburger-menu {
+    display: none;
+}
+*/
+/*Kan bruke den over men bedre sånn når det er flere checkboxes*/
+input[type=checkbox] {
+    display:none;
+}
+
+.dropdown-content {
+    display: none;
+}
+
+/*Same as .dropdown-content but ul instead of div*/
+.menu-items {
+    display: none;
+}
+
+.dropdown-menu:checked ~ .dropdown-content {
+    display: block;
+}
+
+#hamburger-menu:checked ~ .menu-items {
+    display: block;
+}
+
+.dropdown-content{
+    position: absolute;
+    background-color: #262626;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+
+/*MAIN*/
+main {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+    'selector'
+    'cosmology'
+    'evolution'
+    'biomedicine'
+    'roboticai'
+    'ecology';
+}
+
+.selector {
+    margin: 50px 0px;
+    grid-area: selector;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: 
+    'selector-one'
+    'selector-two'
+    'selector-three'
+    'selector-four'
+    'selector-five';
+
+.selector:nth-child(1) {grid-area: selector-one;}
+.selector:nth-child(2) {grid-area: selector-two;}
+.selector:nth-child(3) {grid-area: selector-three;}
+.selector:nth-child(4) {grid-area: selector-four;}
+.selector:nth-child(5) {grid-area: selector-five;}
