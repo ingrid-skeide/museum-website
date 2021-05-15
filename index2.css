@@ -13,12 +13,10 @@ body {
 }
 
 nav {
-    background: rgb(70,74,74);
-    background: linear-gradient(130deg, rgba(70,74,74,1) 0%, rgba(44,44,44,1) 100%);
-    -webkit-box-shadow: 1px 7px 15px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 1px 7px 15px 0px rgba(0,0,0,0.75);
+    border-bottom: black 1px solid;
     min-height: 90px;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -68,6 +66,11 @@ main {
     'exhibits';
 }
 
+.welcome {
+    background: rgb(81,194,243);
+    background: radial-gradient(circle, rgba(81,194,243,1) 0%, rgba(39,168,223,1) 50%, rgba(33,129,170,1) 100%);
+}
+
 .welcome-carousel {
     grid-area: welcome;
     padding: 50px;
@@ -91,17 +94,16 @@ h1 {
     text-transform: uppercase;
     margin: 0;
     font-size: 3.5em;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 h2 {
     text-align: center;
     font-family: 'Michroma', sans-serif;
     font-weight: 500;
-    font-size: 2.2em;
-    border-top: #D9AD2B solid 2px;
-    border-bottom: #D9AD2B solid 2px;
-    padding: 25px;
+    border-top: #efefef solid 2px;
+    border-bottom: #efefef solid 2px;
+    padding: 10px;
 }
 
 p {
@@ -112,8 +114,8 @@ p {
 
 .hr-1 {
     margin: 50px 30px;
-    color: #2c2c2c;
-    height: 3px;
+    color: #707070;
+    height: 2px;
     width: 80%;
     background-color: #707070;
     border: none;
@@ -121,8 +123,8 @@ p {
 }
 
 .hr-2 {
-    color: #D9AD2B;
-    background-color: #D9AD2B;
+    color: #efefef;
+    background-color: #efefef;
     height: 2px;
     width: 70%;
     border: none;
@@ -156,8 +158,9 @@ img {
 
 .kids {
     grid-area: kids;
-    background-color: #486773;
-    color: #D9AD2B;
+    background: rgb(119,173,194);
+    background: radial-gradient(circle, rgba(119,173,194,1) 0%, rgba(91,137,154,1) 50%, rgba(72,103,115,1) 100%);
+    color: #efefef;
     min-height: 600px;
     display: flex;
     flex-direction: column;
@@ -179,12 +182,17 @@ img {
 
 .cta-1 {
     text-decoration: none;
-    color: #2c2c2c;
-    background-color: #486773;
-    border: solid 3px #2c2c2c;
+    text-align: center;
+    color: #efefef;
+    border: solid 2px #2c2c2c;
     padding: 10px 30px;
-    border-radius: 5px;
-    font-weight: bold;
+    border-radius: 20px;
+    transition: .5s background-color;
+}
+
+.cta-1:hover {
+    background-color: #375662;
+    box-shadow: 1px 1px#375662;
 }
 
 .teachers {
