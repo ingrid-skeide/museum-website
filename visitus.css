@@ -1,4 +1,128 @@
+nav {
+    background: rgb(70,74,74);
+    background: linear-gradient(130deg, rgba(70,74,74,1) 0%, rgba(44,44,44,1) 100%);
+    -webkit-box-shadow: 1px 7px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 7px 15px 0px rgba(0,0,0,0.75);
+    min-height: 90px;
+    width: 100%;
+}
+
+.logo {
+    float: left;
+}
+
+.hamburger-label {
+    float: right;
+    color: #fff;
+}
+
+.menu-items {
+    display: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    float: right;
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+#hamburger-menu:checked ~ .menu-items {
+    display: block;
+}
+
+/*MAIN*/
 body {
     margin: 0;
 }
 
+main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+    'visit'
+    'hours'
+    'location'
+    'features';
+}
+
+.visit {
+    grid-area: visit;
+    background-image: url(images/scott-webb-102825.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    max-height: 30vh;
+}
+
+.layer {
+    background-color: rgba(0, 0, 0, 0.6);
+    min-height: 30vh;
+}
+
+h1 {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 36px;
+    position: absolute;
+}
+
+h2 {
+    padding-bottom: 30px;
+}
+
+.container {
+    padding: 8px;
+    background-color: white;
+    color: black;
+}
+
+.container-lg {
+    padding: 8px;
+    background-color: white;
+    color: black;
+}
+
+.gradient {
+    background: rgb(191,60,48);
+    background: linear-gradient(130deg, rgba(191,60,48,1) 0%, rgba(44,44,44,1) 100%);
+    padding: 6px;
+    margin: 20px;
+    box-shadow: #000 0px 0px 3px 0px;
+}
+
+.hours { grid-area: hours; }
+.location { grid-area: location; }
+.features { grid-area: features; }
+
+.features .container {
+    display: flex;
+    flex-direction: column;
+}
+
+@media  (min-width: 600px) {
+    main {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        'visit visit'
+        'hours location'
+        'features features';
+    }
+    .container-lg {
+        height: 350px;
+    }
+
+    .features .container {
+        flex-direction: row;
+    }
+
+    .features .container div {
+        margin: 5px;
+    }
+}

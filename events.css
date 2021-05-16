@@ -1,0 +1,70 @@
+nav {
+    background: rgb(70,74,74);
+    background: linear-gradient(130deg, rgba(70,74,74,1) 0%, rgba(44,44,44,1) 100%);
+    -webkit-box-shadow: 1px 7px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 7px 15px 0px rgba(0,0,0,0.75);
+    min-height: 90px;
+    width: 100%;
+}
+
+.logo {
+    float: left;
+}
+
+.hamburger-label {
+    float: right;
+    color: #fff;
+}
+
+.menu-items {
+    display: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    float: right;
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+#hamburger-menu:checked ~ .menu-items {
+    display: block;
+}
+
+/*MAIN*/
+body {
+    margin: 0px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Michroma', sans-serif;
+    text-transform: uppercase;
+    margin-top: 50px;
+    font-size: 3.5em;
+    font-weight: 400;
+    border-top: #bf3c30 solid 5px;;
+    border-bottom: #bf3c30 solid 5px;
+    padding: 25px 0px;
+}
+
+h2 {
+    text-align: left;
+    font-family: 'Michroma', sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    border-bottom: #bf3c30 solid 5px;
+    padding: 25px 0px;
+    width: 100%;
+}
+
+p {
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section {
+    padding: 40px;
+}
