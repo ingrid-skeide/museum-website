@@ -3,6 +3,7 @@ nav {
     background: linear-gradient(130deg, rgba(70,74,74,1) 0%, rgba(44,44,44,1) 100%);
     -webkit-box-shadow: 1px 7px 15px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 1px 7px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 7px 15px 0px rgba(0,0,0,0.75);
     min-height: 90px;
     width: 100%;
 }
@@ -36,6 +37,7 @@ nav ul li a {
 /*MAIN*/
 body {
     margin: 0;
+    background-color: #fefefa;
 }
 
 main {
@@ -56,12 +58,16 @@ main {
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
-    max-height: 30vh;
+    max-height: 35vh;
+    margin-bottom: 40px;
 }
 
 .layer {
     background-color: rgba(0, 0, 0, 0.6);
-    min-height: 30vh;
+    min-height: 35vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 h1 {
@@ -69,23 +75,41 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 36px;
-    position: absolute;
+    font-weight: 500;
+    font-family: 'Michroma', sans-serif;
+    text-align: center;
+    margin: 55px;
+    /*position: absolute;
+    top: 30%;
+    left: 30%;*/
 }
 
 h2 {
-    padding-bottom: 30px;
+    padding-bottom: 15px;
+    font-family: 'Michroma', sans-serif;
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px 0;
 }
 
 .container {
-    padding: 8px;
+    padding: 25px;
     background-color: white;
     color: black;
 }
 
 .container-lg {
-    padding: 8px;
+    padding: 25px;
     background-color: white;
     color: black;
+}
+
+.container-lng h2 {
+    margin-bottom: 0;
+    margin-top: 15px;
+    padding-bottom: 0;
 }
 
 .gradient {
@@ -105,6 +129,15 @@ h2 {
     flex-direction: column;
 }
 
+a {
+    text-decoration: none;
+    color: #bf3c30;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 @media  (min-width: 600px) {
     main {
         grid-template-columns: repeat(2, auto);
@@ -114,8 +147,29 @@ h2 {
         'hours location'
         'features features';
     }
+
+    .visit {
+        max-height: 45vh;
+    }
+
+    .layer {
+        min-height: 45vh;
+    }
+
+    .hours {
+        margin-left: 40px;
+    }
+
+    .location {
+        margin-right: 40px;
+    }
+
+    .features {
+        margin: 20px 40px;
+    }
+
     .container-lg {
-        height: 350px;
+        height: 450px;
     }
 
     .features .container {
@@ -123,6 +177,43 @@ h2 {
     }
 
     .features .container div {
-        margin: 5px;
+        margin: 15px;
+        flex: 1;
+    }
+
+    h1 {
+        font-size: 68px;
+    }
+}
+
+@media  (min-width: 800px) {
+    .container-lg {
+        height: 500px;
+    }
+
+    .visit {
+        max-height: 60vh;
+    }
+
+    .layer {
+        min-height: 60vh;
+    }
+
+    .hours {
+        margin-left: 200px;
+    }
+
+    .location {
+        margin-right: 200px;
+    }
+
+    .features {
+        margin: 20px 200px;
+    }
+}
+
+@media  (min-width: 1080px) {
+    .container-lg {
+        height: 350px;
     }
 }
