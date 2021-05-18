@@ -68,13 +68,25 @@ main {
     'exhibits';
 }
 
-.welcome-carousel {
-    grid-area: welcome;
-    padding: 50px;
+main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 25px;
+    border:  solid 1px #2c2c2c; /**/
 }
 
+.welcome-carousel {grid-area: welcome;}
+.explore {grid-area: explore;}
+.kids {grid-area: kids;}
+.teachers {grid-area: teachers;}
+.researchers {grid-area: researchers;}
+.exhibits {grid-area: exhibits;}
+
+/*WELCOME*/
 .welcome-carousel h2 {
-    font-size: 3em;
+    font-size: 2.5em;
     border: none;
 }
 
@@ -83,6 +95,67 @@ main {
     margin: 40px auto;
     position: relative;
     display: block;
+}
+
+/*EXPLORE*/
+.explore-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.explore-img {
+    width: 70%;
+    padding: 30px;
+}
+
+/*KIDS*/
+.kids-section-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px 10px;
+}
+
+.kids-section-1 img {
+    width: 45%;
+    border-radius: 50%;
+    box-shadow: 1px 5px 15px 0px rgba(0,0,0,0.50);
+}
+
+.kids-section-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kids-section-2 img {
+    width: 60%;
+}
+
+.cta-1 {
+    text-decoration: none;
+    color: black;
+    border: solid 3px black;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*TEACHERS*/
+
+/*RESEARCHERS*/
+
+/*EXHIBITS*/
+.exhibits h2 {
+    border-top: #bf3c30 solid 5px;
+    border-bottom: none;
+}
+
+.exhibits img {
+    box-shadow: 1px 5px 13px 0px rgba(0,0,0,0.50);
+    border: solid 1px #2c2c2c;
 }
 
 h1 {
@@ -95,157 +168,46 @@ h1 {
 }
 
 h2 {
-    text-align: left;
+    text-align: center;
     font-family: 'Michroma', sans-serif;
     font-weight: 500;
-    font-size: 2.2em;
-    border-bottom: #bf3c30 solid 5px;
-    padding: 25px 0px;
+    font-size: 1.7em;
+    border-top: #bf3c30 solid 3px;
+    border-bottom: #bf3c30 solid 3px;
+    padding: 10px 0px;
     width: 100%;
 }
 
 p {
     text-align: left;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 20px 70px;
     font-size: 14px;
-    margin: 0;
+    padding: 15px 0;
 }
 
-/*
-.hr-1 {
-    margin: 50px 30px;
+hr {
     color: #2c2c2c;
-    height: 3px;
-    width: 80%;
-    background-color: #707070;
+    height: 2px;
     border: none;
-    margin: 0 auto;
-}
-
-.hr-2 {
-    color: #D9AD2B;
-    background-color: #D9AD2B;
-    height: 5px;
-    width: 70%;
-    border: none;
-}
-*/
-
-
-.explore {
-    grid-area: explore;
-    display: flex;
-    flex-direction: column;
-    margin: 0px auto;
-    padding: 40px;
-}
-
-.explore-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.explore-img {
-    width: 70%;
-    height: 70%;
-    padding: 30px;
+    background-color: #2c2c2c;
 }
 
 img {
     width: 100%;
 }
 
-.kids {
-    grid-area: kids;
-    display: flex;
-    flex-direction: column;
-    margin: 0px auto;
-    padding: 40px;
-}
-
-.kids-section-1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 50px 0px;
-}
-
-.kids-section-1 img {
-    width: 45%;
-    border-radius: 50%;
-    box-shadow: 1px 5px 15px 0px rgba(0,0,0,0.50);
-}
-
-.kids-section-2 {
-    padding: 50px 0px;
-    display: flex;
-    flex-direction: column;
-}
-
-.kids-section-2 img {
-    padding: 50px 0px;
-    width: 70%;
-}
-
-.cta-1 {
-    text-decoration: none;
-    color: white;
-    border: solid 3px white;
-    padding: 10px 30px;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-.teachers {
-    grid-area: teachers;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0px auto;
-    padding: 40px;
-}
-
-.researchers {
-    grid-area: researchers;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0px auto;
-    padding: 40px;
-}
-
-.exhibits {
-    grid-area: exhibits;min-height: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0px auto;
-    padding: 40px;
-}
-
-.exhibits h2 {
-    border-top: #bf3c30 solid 5px;
-    border-bottom: none;
-}
-
-.exhibits img {
-    box-shadow: 1px 5px 13px 0px rgba(0,0,0,0.50);
-    border: solid 1px #2c2c2c;
-}
-
 /*MEDIA QUERIES*/
 @media  (min-width: 600px) {
     .kids-section-2 {
-        flex-direction: ;
+        flex-direction: row;
     }
 }
 
 
 @media  (min-width: 1000px) {
     main {
-        display: grid;
+        max-width: 1150px;
+        margin: 0 auto;
         grid-template-columns: repeat(2, auto);
         grid-template-rows: repeat(5, auto);
         grid-template-areas: 
