@@ -74,7 +74,6 @@ main section {
     align-items: center;
     margin: 20px;
     padding: 25px;
-    border:  solid 1px #2c2c2c; /**/
 }
 
 .welcome-carousel {grid-area: welcome;}
@@ -194,6 +193,15 @@ hr {
 
 img {
     width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #bf3c30;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /*MEDIA QUERIES*/
