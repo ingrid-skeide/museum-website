@@ -1,27 +1,31 @@
 <head>
-    <title>Community Science Museum</title>
+    <title>Find your way to our community science museum and view our amenities here.</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="visitus.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Visit our community science museum.">
+    <meta charset="UTF-8">
 </head>
 
 <body>
     <header>
         <nav>
             <div class="logo">
-                <h3>Logo</h3>
+                <a href="index.html">
+                    <img src="images/open-science-735787.png" alt="logo" class="logo-image">
+                  </a>
             </div>
 
             <label class="hamburger-label" for="hamburger-menu"><i class="fas fa-bars"></i></label>
             <input type="checkbox" id="hamburger-menu">
+
             <div class="menu-items">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="exhibitions.html">Exhibitions</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Get Involved</a></li>
-                    <li><a href="visitus.html">Visit Us</a></li>
-                </ul>
+                <a href="index.html">Home</a>
+                <a href="exhibitions.html">Exhibitions</a>
+                <a href="events.html">Events</a>
+                <a href="getinvolved.html">Get Involved</a>
+                <a href="visitus.html" class="current">Visit Us</a>
             </div>
 
         </nav>
@@ -51,11 +55,11 @@
         <section class="location gradient">
             <div class="container container-lg">
                 <h2>Location</h2>
-                <p>The museum is located at [student to include address].</p>
+                <p>The museum is located at Bygdøynesveien 39, 0286 Oslo.</p>
                 <p>There is free parking for our guests.</p>
                 <p>To get here by public transport you can either go by:</p>
-                <p>Bus: Take number 15 to (insert stop here). 10 minute walk from the stop.</p>
-                <p>Tram: Take number 12 to (stop) or (stop).</p>
+                <p>Bus: Take number to Fredriksborg station. 14 minute walk from the stop.</p>
+                <p>Car: 15 minute drive, barring rush hour traffic.</p>
                 <p>See map <a href="#">here</a>.</p>
             </div>
         </section>
@@ -78,4 +82,22 @@
         </section>
 
     </main>
+
+    <footer>
+        <div class="footer-main">
+            <div class="logo-bottom">
+                <a href="index.html">
+                    <img src="images/open-science-735787.png" alt="logo">
+                </a>
+            </div>
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="copy">
+            <p class="copyright">&copy; 2021 Community Science Museum</p>
+        </div>
+    </footer>
 </body>

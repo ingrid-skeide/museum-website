@@ -1,0 +1,161 @@
+main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: 
+    'title'
+    'section-1'
+    'section-2'
+    'section-3'
+    'subscribe';
+}
+
+.title {
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Michroma', sans-serif;
+    text-transform: uppercase;
+    margin: 50px 0px 0px 0px;
+    font-size: 2em;
+    font-weight: 500;
+    border-top: #bf3c30 solid 3px;
+    border-bottom: #bf3c30 solid 3px;
+    padding: 10px;
+}
+
+h2 {
+    text-align: left;
+    font-family: 'Michroma', sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    width: 100%;
+    color: white;
+    border-bottom: black solid 3px;
+    padding-bottom: 10px;
+    margin: 10px 0px;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Michroma', sans-serif;
+    font-size: 2em;
+    font-weight: 300;
+    padding: 25px 0px;
+    margin: 0;
+}
+
+.support, .volunteer, .internships {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #bf3c30;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cta-container {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.section-1 {
+    grid-area: section-1;
+    margin: 0px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-2 {
+    grid-area: section-2;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.section-2 div {
+    display: flex;
+    padding: 50px;
+    background-color: #616163;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-3 {
+    grid-area: section-3;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.section-3 div {
+    display: flex;
+    padding: 50px;
+    background-color: #616163;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta {
+    text-decoration: none;
+    color: white;
+    border: solid 3px white;
+    padding: 10px 30px;
+    margin: 20px 0px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    padding: 10px 0;
+    margin: 0;
+    color: white;
+}
+
+.section-2 img, .section-3 img {
+    width: 80%;
+    margin-top: 20px;
+    box-shadow: 1px 5px 13px 0px rgba(0,0,0,0.50);
+    border: solid 1px #2c2c2c;
+}
+
+.subscribe {
+    grid-area: subscribe;
+    height: 65vh;
+}
+
+.subscribe-content {
+    height: 57.5vh;
+}
+
+@media  (min-width: 800px) {
+    .section-1 {
+        flex-direction: row;
+        margin: 20px auto;
+        max-width: 1000px;
+    }
+
+    .support, .volunteer, .internships {
+        margin: 20px;
+        flex: 1;
+    }
+
+    .section-2 div {
+        border-radius: 5px;
+        margin: 20px;
+    }
+
+    .section-3 div {
+        border-radius: 5px;
+        margin: 20px;
+    }
+}

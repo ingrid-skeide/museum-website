@@ -1,27 +1,31 @@
 <head>
-    <title>Community Science Museum</title>
+    <title>Explore our current exhibitions.</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="exhibitions.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Visit our community science museum.">
+    <meta charset="UTF-8">
 </head>
 
 <body>
     <header>
         <nav>
             <div class="logo">
-                <h2>Logo</h2>
+                <a href="index.html">
+                    <img src="images/open-science-735787.png" alt="logo" class="logo-image">
+                  </a>
             </div>
 
             <label class="hamburger-label" for="hamburger-menu"><i class="fas fa-bars"></i></label>
             <input type="checkbox" id="hamburger-menu">
+
             <div class="menu-items">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="exhibitions.html">Exhibitions</a></li>
-                    <li><a href="events.css">Events</a></li>
-                    <li><a href="#">Get Involved</a></li>
-                    <li><a href="visitus.html">Visit Us</a></li>
-                </ul>
+                <a href="index.html">Home</a>
+                <a href="exhibitions.html" class="current">Exhibitions</a>
+                <a href="events.html">Events</a>
+                <a href="getinvolved.html">Get Involved</a>
+                <a href="visitus.html">Visit Us</a>
             </div>
 
         </nav>
@@ -51,44 +55,77 @@
         </section>
 
         <section class="cosmology" id="cosmology">
-            <h3>The Sky Above Us</h3>
+            <h3>Cosmology</h3>
             <p>Explore the wonders of our cosmos. Our fantastic exhibition, ‘The Sky Above Us’, explores the night sky and what we can see and know about the universe around us. We’ll locate the various constellations and galaxies that can be seen and learn a bit about the early navigators who used the stars to travel by.
             </p>
             <p>Follow the journey of our solar exploration: from early Arab traders, to Galileo’s telescope, to the latest exploration of the planets in our solar system.
             </p>
-
         </section>
 
         <section class="evolution" id="evolution">
-            <h3>Evolution</h3>
-            <p>For centuries, philosophers and scientists have wrestled with the question of our origins. Where do we come from and how did we get here? Since Darwin proposed his theory of evolution we have had a framework for exploring and understanding our place in this world.
-            </p>
-            <p>Discover the origins of life on this planet and how the species we know today have evolved our time. You can also take some time to meet a few of the creatures who didn’t survive, including our Woolly Mammoth, the Dodos, and a number of dinosaurs too.
-            </p>
-
+            <div>
+                <h3>Evolution</h3>
+                <p>For centuries, philosophers and scientists have wrestled with the question of our origins. Where do we come from and how did we get here? Since Darwin proposed his theory of evolution we have had a framework for exploring and understanding our place in this world.
+                </p>
+                <p>Discover the origins of life on this planet and how the species we know today have evolved our time. You can also take some time to meet a few of the creatures who didn’t survive, including our Woolly Mammoth, the Dodos, and a number of dinosaurs too.
+                </p>
+            </div>
+            <div class="exhibit-img">
+                <img src="/images/mammoth-1257288_1920.jpg" alt="A mammoth in the evolution exhibit">
+            </div>
         </section>
 
         <section class="biomedicine" id="biomedicine">
-            <h3>Biology and Medicine</h3>
-            <p>From micro-organisms to the human body, major breakthroughs in biology are offering us unique insights into the great wonders of the tiny world. </p>
-            <p>For many people their life expectancy is much longer and their quality of life much improved, thanks to the growth of our understanding of medicine. Over a series of exhibits we explore the history of medicine and take a look at some major breakthroughs including the discovery of penicillin and the first heart transplant.</p>
-            <p>Many of our great medicinal discoveries have come not only from the lab, but also from observing animals in the wild. Often our fellow creatures have beat us to it.</p>
-
+            <div>
+                <h3>Biology and Medicine</h3>
+                <p>From micro-organisms to the human body, major breakthroughs in biology are offering us unique insights into the great wonders of the tiny world. </p>
+                <p>For many people their life expectancy is much longer and their quality of life much improved, thanks to the growth of our understanding of medicine. Over a series of exhibits we explore the history of medicine and take a look at some major breakthroughs including the discovery of penicillin and the first heart transplant.</p>
+                <p>Many of our great medicinal discoveries have come not only from the lab, but also from observing animals in the wild. Often our fellow creatures have beat us to it.</p>
+            </div>
+            <div class="exhibit-img">
+                <img src="/images/heart-2607178_1920.jpg" alt="A human heart in the biology and medicine exhibit">
+            </div>
         </section>
 
         <section class="roboticai" id="roboticai">
-            <h3>Robotics and AI</h3>
-            <p>The information revolution is here and robotics and artificial intelligence are the science of the future. From useful home applications of AI to industrial uses of robotics, the future is here. You can even say hello and shake the hand of Rob the Robot.</p>
-
+            <div>
+                <h3>Robotics and AI</h3>
+                <p>The information revolution is here and robotics and artificial intelligence are the science of the future. From useful home applications of AI to industrial uses of robotics, the future is here. You can even say hello and shake the hand of Rob the Robot.</p>
+            </div>
+            <div class="exhibit-img">
+                <img src="/images/scientific-2040795_1280.jpg" alt="A scientist working on robotics in the Robotics and AI exhibit">
+            </div>
         </section>
 
         <section class="ecology" id="ecology">
-            <h3>Ecology</h3>
-            <p>As we learn more and more of the impact humans are having on the planet, the more important it becomes that scientists explore how to create a sustainable future not just for humans but for the whole planet.
-            </p>
-            <p>In our ecology section of the museum, we unpack the dangers we currently face including global warming, extinction of species, and pollution. But we also focus on the positive ways we can all contribute to a brighter future.
-            </p>
-
+            <div>
+                <h3>Ecology</h3>
+                <p>As we learn more and more of the impact humans are having on the planet, the more important it becomes that scientists explore how to create a sustainable future not just for humans but for the whole planet.
+                </p>
+                <p>In our ecology section of the museum, we unpack the dangers we currently face including global warming, extinction of species, and pollution. But we also focus on the positive ways we can all contribute to a brighter future.
+                </p>
+            </div>
+            <div class="exhibit-img">
+                <img src="/images/genoa-956405_1920.jpg" alt="A giant ant in the ecology exhibit">
+            </div>
         </section>
     </main>
+
+    <footer>
+        <div class="footer-main">
+            <div class="logo-bottom">
+                <a href="index.html">
+                    <img src="images/open-science-735787.png" alt="logo">
+                </a>
+            </div>
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="copy">
+            <p class="copyright">&copy; 2021 Community Science Museum</p>
+        </div>
+    </footer>
 </body>

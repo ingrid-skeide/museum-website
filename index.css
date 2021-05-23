@@ -8,59 +8,12 @@
     src: url('https://fonts.googleapis.com/css2?family=Michroma&family=Roboto+Mono:wght@100&display=swap');
 }
 
-/*
-
-nav {
-    background: rgb(70,74,74);
-    background: linear-gradient(130deg, rgba(70,74,74,1) 0%, rgba(44,44,44,1) 100%);
-    -webkit-box-shadow: 1px 7px 15px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 1px 7px 15px 0px rgba(0,0,0,0.75);
-    min-height: 90px;
-    width: 100%;
-}
-
-.logo {
-    float: left;
-}
-
-.hamburger-label {
-    float: right;
-    color: #fff;
-}
-
-.menu-items {
-    display: none;
-}
-
-nav ul li a {
-    text-decoration: none;
-    float: right;
-}
-
-#hamburger-menu {
-    display: none;
-}
-
-#hamburger-menu:checked ~ .menu-items {
-    display: block;
-}
-
-*/
-
-
-
 /*MAIN*/
-body {
-    margin: 0;
-    background-color: #fefefa;
-}
-
-main {
+.main-content {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: repeat(6, auto);
+    grid-template-rows: repeat(5, auto);
     grid-template-areas: 
-    'welcome'
     'explore'
     'kids'
     'teachers'
@@ -68,15 +21,34 @@ main {
     'exhibits';
 }
 
-main section {
+.main-content section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
-    padding: 25px;
 }
 
-.welcome-carousel {grid-area: welcome;}
+.welcome { 
+    background-image: url("images/small_shutterstock_1251051523.jpg");
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.layer {
+    background-color: rgba(0, 0, 0, 0.4);
+    min-height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
 .explore {grid-area: explore;}
 .kids {grid-area: kids;}
 .teachers {grid-area: teachers;}
@@ -84,16 +56,19 @@ main section {
 .exhibits {grid-area: exhibits;}
 
 /*WELCOME*/
-.welcome-carousel h2 {
+.welcome h2 {
     font-size: 2.5em;
     border: none;
+    color: white;
 }
 
 .mammoth {
-    width: 95%;
+    width: 100%;
     margin: 40px auto;
-    position: relative;
+    position: fixed;
+    top: 10vh;
     display: block;
+    z-index: -10;
 }
 
 /*EXPLORE*/
@@ -103,12 +78,12 @@ main section {
     align-items: center;
 }
 
-.explore-img {
-    width: 70%;
-    padding: 30px;
+/*KIDS*/
+.kids {
+    background-color: #bf3c30;
+    border-radius: 5px;
 }
 
-/*KIDS*/
 .kids-section-1 {
     display: flex;
     flex-direction: row;
@@ -130,13 +105,42 @@ main section {
 
 .kids-section-2 img {
     width: 60%;
+    margin: 60px;
+    flex: 1;
+    box-shadow: 1px 5px 15px 0px rgba(0,0,0,0.50);
+}
+
+.kids-section-2 p {
+    flex: 1;
+}
+
+.kids h2 {
+    border-top: black solid 3px;
+    border-bottom: black solid 3px;
+    color: white;
+}
+
+.kids p {
+    color: white;
 }
 
 .cta-1 {
     text-decoration: none;
+    color: white;
+    border: solid 3px white;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cta-2 {
+    text-decoration: none;
     color: black;
     border: solid 3px black;
     padding: 10px 30px;
+    margin-top: 20px;
     border-radius: 30px;
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -150,6 +154,7 @@ main section {
 .exhibits h2 {
     border-top: #bf3c30 solid 5px;
     border-bottom: none;
+    max-width: 100%;
 }
 
 .exhibits img {
@@ -157,13 +162,23 @@ main section {
     border: solid 1px #2c2c2c;
 }
 
+.explore, .kids, .teachers, .researchers, .exhibits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 25px;
+}
+
+
 h1 {
     text-align: center;
     font-family: 'Michroma', sans-serif;
     text-transform: uppercase;
-    margin: 0;
+    margin-top: 30px;
     font-size: 3.5em;
     font-weight: 400;
+    color: white;
 }
 
 h2 {
@@ -175,6 +190,7 @@ h2 {
     border-bottom: #bf3c30 solid 3px;
     padding: 10px 0px;
     width: 100%;
+    max-width: 300px;
 }
 
 p {
@@ -182,17 +198,6 @@ p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
     padding: 15px 0;
-}
-
-hr {
-    color: #2c2c2c;
-    height: 2px;
-    border: none;
-    background-color: #2c2c2c;
-}
-
-img {
-    width: 100%;
 }
 
 a {
@@ -206,23 +211,62 @@ a:hover {
 
 /*MEDIA QUERIES*/
 @media  (min-width: 600px) {
+    .kids-section-1 {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
     .kids-section-2 {
         flex-direction: row;
     }
+
+    .welcome {
+        max-height: 45vh;
+    }
+
+    .layer {
+        min-height: 45vh;
+    }
+
+    .main-content {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
 }
 
 
-@media  (min-width: 1000px) {
-    main {
-        max-width: 1150px;
-        margin: 0 auto;
+@media  (min-width: 800px) {
+    .main-content {
         grid-template-columns: repeat(2, auto);
-        grid-template-rows: repeat(5, auto);
+        grid-template-rows: repeat(4, auto);
         grid-template-areas: 
-        'welcome welcome'
         'explore explore'
         'kids kids'
         'teachers researchers'
         'exhibits exhibits';
     }
+
+    .welcome {
+        max-height: 60vh;
+    }
+
+    .layer {
+        min-height: 60vh;
+    }
+
+    p {
+        font-size: 16px;
+    }
 }
+
+@media  (min-width: 1000px) {
+    p {
+        font-size: 18px;
+    }
+}
+
