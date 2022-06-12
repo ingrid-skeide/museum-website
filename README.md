@@ -14,6 +14,7 @@ The project contains the following pages:
 
 ## What I learned
 
+For this project I learned how to work on a large project. I became more effective at writing HTML and CSS and understood how connected they really are. 
 
 ## Built With
 
