@@ -1,5 +1,5 @@
 # Community Science Museum
-## semester project 1
+## Semester project 1
 
 This is the final project at the end of the first semester of my studies at Noroff. The task was to create a websitelog to showcase what I've learned over this year.
 The material like images, logo and text was provided so I could spend my time and attention on the planning, design, HTML and CSS.
